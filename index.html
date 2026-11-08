@@ -1,0 +1,1234 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tiếng Trung Khoán HSK | Chinh Phục Tiếng Trung Dễ Dàng - Zalo: 0908 278 993</title>
+  <meta name="description" content="Tiếng Trung Khoán HSK (KHOANHSK.BIZ) - Tuyển sinh khóa tiếng Trung trẻ em (YCT) và người lớn (HSK 1-6, Giao tiếp) ứng dụng AI, học phí bình dân. Liên hệ Zalo: 0908278993.">
+  <!-- Google Fonts: Nunito -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,600&display=swap" rel="stylesheet">
+  <!-- FontAwesome 6 CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    /* ==========================================================================
+       1. BIẾN CSS & THIẾT LẬP CƠ BẢN (RESET)
+       ========================================================================== */
+    :root {
+      --red-primary: #dc2626;
+      --red-dark: #991b1b;
+      --red-light: #fef2f2;
+      --gold-cta: #fbbf24;
+      --gold-hover: #f59e0b;
+      --bg-white: #ffffff;
+      --bg-gray: #f8fafc;
+      --text-main: #1e293b;
+      --text-muted: #475569;
+      --border-light: #e2e8f0;
+      --radius-img: 12px;
+      --radius-card: 16px;
+      --shadow-soft: 0 8px 24px -4px rgba(15, 23, 42, 0.08);
+      --shadow-hover: 0 18px 36px -6px rgba(220, 38, 38, 0.16);
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-family: 'Nunito', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--text-main);
+      background-color: var(--bg-white);
+      line-height: 1.65;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: var(--transition);
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+      border-radius: var(--radius-img);
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* ==========================================================================
+       2. HIỆU ỨNG NHỊP TIM (PULSE) & NÚT BẤM (BUTTONS)
+       ========================================================================== */
+    @keyframes pulseHeartbeat {
+      0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(251, 191, 36, 0.65);
+      }
+      50% {
+        transform: scale(1.03);
+        box-shadow: 0 0 0 12px rgba(251, 191, 36, 0);
+      }
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 28px;
+      font-size: 1.05rem;
+      font-weight: 800;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      transition: var(--transition);
+      text-align: center;
+    }
+
+    .btn-gold {
+      background-color: var(--gold-cta);
+      color: #78350f;
+      box-shadow: 0 6px 18px rgba(251, 191, 36, 0.4);
+    }
+
+    .btn-gold:hover {
+      background-color: var(--gold-hover);
+      color: #451a03;
+      transform: translateY(-3px);
+    }
+
+    .btn-pulse {
+      animation: pulseHeartbeat 2.2s infinite;
+    }
+
+    .btn-red {
+      background-color: var(--red-primary);
+      color: var(--bg-white);
+      box-shadow: 0 6px 18px rgba(220, 38, 38, 0.3);
+      width: 100%;
+    }
+
+    .btn-red:hover {
+      background-color: var(--red-dark);
+      transform: translateY(-3px);
+    }
+
+    .section-title-box {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 50px;
+    }
+
+    .section-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background-color: var(--red-light);
+      color: var(--red-primary);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-weight: 800;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 12px;
+    }
+
+    .section-title-box h2 {
+      font-size: 2.1rem;
+      font-weight: 900;
+      color: var(--text-main);
+      line-height: 1.25;
+      margin-bottom: 12px;
+    }
+
+    .section-title-box h2 span {
+      color: var(--red-primary);
+    }
+
+    .section-title-box p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+    }
+
+    /* ==========================================================================
+       3. HEADER CỐ ĐỊNH (STICKY NAVIGATION)
+       ========================================================================== */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 2px solid var(--red-light);
+      padding: 14px 0;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+    }
+
+    .header-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 1.35rem;
+      font-weight: 900;
+      color: var(--red-primary);
+    }
+
+    .logo-badge {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--red-primary), var(--red-dark));
+      color: var(--gold-cta);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      font-weight: 900;
+      box-shadow: 0 4px 10px rgba(220, 38, 38, 0.3);
+    }
+
+    .nav-links {
+      display: none;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .nav-links a {
+      font-weight: 700;
+      color: var(--text-main);
+      font-size: 1rem;
+    }
+
+    .nav-links a:hover {
+      color: var(--red-primary);
+    }
+
+    .header-cta {
+      display: none;
+      padding: 10px 22px;
+      font-size: 0.95rem;
+    }
+
+    .mobile-toggle {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      border: 1.5px solid var(--red-primary);
+      background: var(--red-light);
+      color: var(--red-primary);
+      font-size: 1.2rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .mobile-menu {
+      display: none;
+      background-color: var(--bg-white);
+      padding: 16px 20px 24px;
+      border-bottom: 2px solid var(--red-light);
+    }
+
+    .mobile-menu.active {
+      display: block;
+    }
+
+    .mobile-menu a {
+      display: block;
+      padding: 12px 0;
+      font-weight: 700;
+      border-bottom: 1px solid var(--border-light);
+      color: var(--text-main);
+    }
+
+    /* ==========================================================================
+       4. SECTION 1: HERO BANNER
+       ========================================================================== */
+    .hero-section {
+      background: linear-gradient(135deg, #991b1b 0%, #dc2626 55%, #b91c1c 100%);
+      color: var(--bg-white);
+      padding: 64px 0 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-section::after {
+      content: "漢";
+      position: absolute;
+      right: -30px;
+      bottom: -60px;
+      font-size: 22rem;
+      font-weight: 900;
+      color: rgba(255, 255, 255, 0.05);
+      pointer-events: none;
+      line-height: 1;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 44px;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: rgba(251, 191, 36, 0.2);
+      border: 1px solid rgba(251, 191, 36, 0.5);
+      color: var(--gold-cta);
+      padding: 7px 16px;
+      border-radius: 999px;
+      font-weight: 800;
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+    }
+
+    .hero-text h1 {
+      font-size: 2.2rem;
+      font-weight: 900;
+      line-height: 1.22;
+      margin-bottom: 20px;
+    }
+
+    .hero-text h1 span {
+      color: var(--gold-cta);
+      text-decoration: underline;
+      text-decoration-color: rgba(251, 191, 36, 0.4);
+    }
+
+    .hero-text p {
+      font-size: 1.12rem;
+      color: #fee2e2;
+      margin-bottom: 32px;
+      max-width: 580px;
+    }
+
+    .hero-highlights {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .hero-highlight-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--bg-white);
+    }
+
+    .hero-highlight-item i {
+      color: var(--gold-cta);
+    }
+
+    .hero-image-card {
+      position: relative;
+      background-color: rgba(255, 255, 255, 0.12);
+      padding: 14px;
+      border-radius: 18px;
+      border: 2px solid rgba(251, 191, 36, 0.4);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+    }
+
+    .hero-floating-badge {
+      position: absolute;
+      bottom: -16px;
+      left: 24px;
+      background-color: var(--bg-white);
+      color: var(--text-main);
+      padding: 12px 20px;
+      border-radius: var(--radius-img);
+      box-shadow: var(--shadow-soft);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      font-size: 0.92rem;
+    }
+
+    .hero-floating-badge i {
+      font-size: 1.5rem;
+      color: var(--red-primary);
+    }
+
+    /* ==========================================================================
+       5. SECTION 2: CÂU CHUYỆN TRUYỀN CẢM HỨNG (STORYTELLING)
+       ========================================================================== */
+    .story-section {
+      padding: 84px 0;
+      background-color: var(--bg-white);
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 44px;
+      align-items: center;
+    }
+
+    .story-content h2 {
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--text-main);
+      margin-bottom: 18px;
+      line-height: 1.25;
+    }
+
+    .story-content h2 span {
+      color: var(--red-primary);
+    }
+
+    .story-content p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      margin-bottom: 18px;
+    }
+
+    .philosophy-pillars {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .pillar-box {
+      background-color: var(--red-light);
+      border-left: 4px solid var(--red-primary);
+      padding: 14px;
+      border-radius: 10px;
+    }
+
+    .pillar-box strong {
+      display: block;
+      color: var(--red-primary);
+      font-size: 1.05rem;
+      font-weight: 900;
+      margin-bottom: 4px;
+    }
+
+    .pillar-box span {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .story-image-wrap {
+      position: relative;
+    }
+
+    .story-quote-card {
+      margin-top: 18px;
+      background-color: var(--bg-gray);
+      border: 1px solid var(--border-light);
+      padding: 18px 22px;
+      border-radius: var(--radius-img);
+      font-style: italic;
+      font-weight: 700;
+      color: var(--red-dark);
+    }
+
+    /* ==========================================================================
+       6. SECTION 3: CÁC KHÓA HỌC TIÊU BIỂU (GRID CARDS)
+       ========================================================================== */
+    .courses-section {
+      padding: 84px 0;
+      background-color: var(--bg-gray);
+    }
+
+    .courses-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+
+    .course-card {
+      background-color: var(--bg-white);
+      border-radius: var(--radius-card);
+      border: 2px solid var(--border-light);
+      overflow: hidden;
+      box-shadow: var(--shadow-soft);
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .course-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--red-primary);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .course-banner {
+      padding: 28px 26px 20px;
+      background: linear-gradient(135deg, #fef2f2 0%, #fffbeb 100%);
+      border-bottom: 1px solid var(--border-light);
+      position: relative;
+    }
+
+    .course-badge {
+      display: inline-block;
+      background-color: var(--red-primary);
+      color: var(--bg-white);
+      font-size: 0.8rem;
+      font-weight: 800;
+      padding: 4px 14px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+
+    .course-banner h3 {
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: var(--text-main);
+    }
+
+    .course-body {
+      padding: 26px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .course-info-list {
+      list-style: none;
+      margin-bottom: 24px;
+      flex-grow: 1;
+    }
+
+    .course-info-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 14px;
+      font-size: 1rem;
+      color: var(--text-main);
+    }
+
+    .course-info-list li i {
+      color: var(--red-primary);
+      margin-top: 5px;
+      font-size: 1.1rem;
+    }
+
+    .course-tuition-box {
+      background-color: #fffbeb;
+      border: 1.5px dashed var(--gold-hover);
+      padding: 14px 18px;
+      border-radius: var(--radius-img);
+      margin-bottom: 22px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .course-tuition-box i {
+      font-size: 1.5rem;
+      color: var(--gold-hover);
+    }
+
+    .course-tuition-box div span {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+    }
+
+    .course-tuition-box div strong {
+      font-size: 1.02rem;
+      font-weight: 900;
+      color: var(--red-primary);
+    }
+
+    /* ==========================================================================
+       7. SECTION 4: LỜI BÌNH LUẬN CỦA HỌC VIÊN (TESTIMONIALS)
+       ========================================================================== */
+    .testimonials-section {
+      padding: 84px 0;
+      background-color: var(--bg-white);
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+
+    .review-card {
+      background-color: var(--bg-gray);
+      border-radius: var(--radius-card);
+      padding: 30px 26px;
+      border: 1px solid var(--border-light);
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .review-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-soft);
+      border-color: var(--gold-cta);
+    }
+
+    .review-stars {
+      color: var(--gold-hover);
+      margin-bottom: 16px;
+      font-size: 1.05rem;
+    }
+
+    .review-text {
+      font-size: 1.02rem;
+      font-style: italic;
+      color: var(--text-main);
+      margin-bottom: 24px;
+    }
+
+    .reviewer-meta {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border-light);
+    }
+
+    .reviewer-avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background-color: var(--red-primary);
+      color: var(--bg-white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 1.1rem;
+    }
+
+    .reviewer-meta strong {
+      display: block;
+      font-size: 1rem;
+      color: var(--text-main);
+    }
+
+    .reviewer-meta span {
+      font-size: 0.85rem;
+      color: var(--red-primary);
+      font-weight: 700;
+    }
+
+    /* ==========================================================================
+       8. SECTION 5: FORM ĐĂNG KÝ TRỰC TUYẾN & CHUYỂN HƯỚNG ZALO
+       ========================================================================== */
+    .register-section {
+      padding: 84px 0;
+      background: linear-gradient(180deg, var(--bg-gray) 0%, #fee2e2 100%);
+    }
+
+    .register-box {
+      max-width: 680px;
+      margin: 0 auto;
+      background-color: var(--bg-white);
+      border-radius: 22px;
+      padding: 40px 28px;
+      box-shadow: 0 24px 48px rgba(153, 27, 27, 0.14);
+      border: 2px solid rgba(220, 38, 38, 0.15);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: 800;
+      margin-bottom: 8px;
+      color: var(--text-main);
+      font-size: 0.96rem;
+    }
+
+    .form-group label span {
+      color: var(--red-primary);
+    }
+
+    .form-input {
+      width: 100%;
+      padding: 14px 16px;
+      border-radius: var(--radius-img);
+      border: 1.5px solid var(--border-light);
+      background-color: var(--bg-gray);
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-main);
+      transition: var(--transition);
+    }
+
+    .form-input:focus {
+      outline: none;
+      border-color: var(--red-primary);
+      background-color: var(--bg-white);
+      box-shadow: 0 0 0 4px rgba(220, 38, 38, 0.1);
+    }
+
+    .form-input.flash-select {
+      border-color: var(--gold-hover);
+      background-color: #fffbeb;
+      box-shadow: 0 0 0 4px rgba(251, 191, 36, 0.35);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    /* ==========================================================================
+       9. FOOTER & NÚT ZALO NỔI
+       ========================================================================== */
+    .site-footer {
+      background-color: #1e293b;
+      color: #cbd5e1;
+      padding: 48px 0;
+      text-align: center;
+    }
+
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .footer-brand {
+      font-size: 1.4rem;
+      font-weight: 900;
+      color: var(--gold-cta);
+    }
+
+    .footer-hotline {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: var(--red-primary);
+      color: var(--bg-white);
+      padding: 8px 20px;
+      border-radius: 999px;
+      font-weight: 800;
+    }
+
+    .floating-zalo-btn {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 999;
+      background-color: var(--red-primary);
+      color: var(--bg-white);
+      padding: 14px 22px;
+      border-radius: 999px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 10px 25px rgba(220, 38, 38, 0.45);
+    }
+
+    .floating-zalo-btn:hover {
+      background-color: var(--red-dark);
+      transform: scale(1.05);
+    }
+
+    /* ==========================================================================
+       10. MEDIA QUERIES (TABLET & DESKTOP)
+       ========================================================================== */
+    @media (min-width: 640px) {
+      .form-row {
+        grid-template-columns: 1.3fr 0.7fr;
+      }
+
+      .register-box {
+        padding: 48px 44px;
+      }
+    }
+
+    @media (min-width: 992px) {
+      .nav-links {
+        display: flex;
+      }
+
+      .header-cta {
+        display: inline-flex;
+      }
+
+      .mobile-toggle {
+        display: none;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1.15fr 0.85fr;
+      }
+
+      .hero-text h1 {
+        font-size: 3rem;
+      }
+
+      .story-grid {
+        grid-template-columns: 1.05fr 0.95fr;
+      }
+
+      .courses-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .testimonials-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== HEADER CỐ ĐỊNH ==================== -->
+  <header class="site-header">
+    <div class="container header-wrap">
+      <a href="#" class="brand-logo">
+        <div class="logo-badge">漢</div>
+        <div>Tiếng Trung Khoán HSK</div>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#cau-chuyen">Câu Chuyện</a>
+        <a href="#khoa-hoc">Khóa Học</a>
+        <a href="#cam-nhan">Cảm Nhận</a>
+        <a href="#dang-ky">Đăng Ký</a>
+      </nav>
+
+      <a href="https://zalo.me/0908278993" target="_blank" rel="noopener noreferrer" class="btn btn-gold header-cta">
+        <i class="fa-solid fa-comment-dots"></i> Chat Zalo Ngay
+      </a>
+
+      <button class="mobile-toggle" id="mobileToggleBtn" aria-label="Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#cau-chuyen" class="m-link">Câu Chuyện</a>
+      <a href="#khoa-hoc" class="m-link">Khóa Học</a>
+      <a href="#cam-nhan" class="m-link">Cảm Nhận</a>
+      <a href="#dang-ky" class="m-link">Đăng Ký</a>
+      <div style="margin-top: 14px;">
+        <a href="https://zalo.me/0908278993" target="_blank" rel="noopener noreferrer" class="btn btn-gold" style="width: 100%;">
+          <i class="fa-solid fa-comment-dots"></i> Chat Zalo Ngay (0908 278 993)
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== SECTION 1: HERO BANNER ==================== -->
+  <section class="hero-section">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <div class="hero-pill">
+          <i class="fa-solid fa-wand-magic-sparkles"></i> Đào Tạo Tiếng Trung Thế Hệ Mới Kết Hợp AI
+        </div>
+        <h1>
+          Chinh Phục Tiếng Trung Dễ Dàng Cùng <span>Tiếng Trung Khoán HSK</span>
+        </h1>
+        <p>
+          Lộ trình cá nhân hóa, ứng dụng công nghệ AI vào giảng dạy. Lớp học trực tuyến chất lượng cao với mức học phí tiết kiệm nhất cho mọi nhà.
+        </p>
+
+        <a href="#dang-ky" class="btn btn-gold btn-pulse">
+          <i class="fa-solid fa-gift"></i> Nhận Lộ Trình Học Phí Ưu Đãi
+        </a>
+
+        <div class="hero-highlights">
+          <div class="hero-highlight-item">
+            <i class="fa-solid fa-circle-check"></i> Trẻ em YCT &amp; Người lớn HSK 1-6
+          </div>
+          <div class="hero-highlight-item">
+            <i class="fa-solid fa-circle-check"></i> Tương tác trực tiếp qua Zoom
+          </div>
+          <div class="hero-highlight-item">
+            <i class="fa-solid fa-circle-check"></i> Học phí bình dân dễ tiếp cận
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-image-card">
+        <img src="https://placehold.co/600x450/dc2626/fbbf24?text=Thay+Khoan+Giang+Day+Tieng+Trung" alt="Thầy Khoán vui vẻ giảng bài tiếng Trung">
+        <div class="hero-floating-badge">
+          <i class="fa-solid fa-award"></i>
+          <div>
+            <div>Hơn 10 Năm Kinh Nghiệm</div>
+            <small style="color: #64748b; font-weight: 600;">Tận tâm • Sáng tạo • Truyền cảm hứng</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 2: STORYTELLING ==================== -->
+  <section id="cau-chuyen" class="story-section">
+    <div class="container story-grid">
+      <div class="story-content">
+        <div class="section-tag">
+          <i class="fa-solid fa-fire-flame-curved"></i> Hành Trình &amp; Triết Lý Giáo Dục
+        </div>
+        <h2>Từ Bục Giảng Đến <span>Người Truyền Lửa Tiếng Trung</span></h2>
+        <p>
+          Xuất phát từ hành trình hơn <strong>10 năm đứng trên bục giảng đại học</strong>, thầy Khoán luôn trăn trở làm sao để việc học ngoại ngữ trở nên nhẹ nhàng, thực tế và mang lại giá trị đổi đời cho mỗi học viên.
+        </p>
+        <p>
+          Bước vào kỷ nguyên số, thầy đã chuyển mình mạnh mẽ, kết hợp phương pháp sư phạm bài bản với <strong>công nghệ trí tuệ nhân tạo (AI)</strong>. Đặc biệt, thầy lồng ghép triết lý phát triển toàn diện <strong>"Thân - Tâm - Trí"</strong> vào từng bài giảng.
+        </p>
+        <p>
+          Tại <strong>Tiếng Trung Khoán HSK</strong>, học viên không chỉ học mặt chữ Hán hay luyện phát âm chuẩn xác, mà còn được rèn luyện tư duy tích cực, làm chủ công cụ AI hiện đại để tự tin nắm bắt cơ hội học tập, thăng tiến trong thời đại mới.
+        </p>
+
+        <div class="philosophy-pillars">
+          <div class="pillar-box">
+            <strong>THÂN</strong>
+            <span>Học vui vẻ, tràn đầy năng lượng mỗi giờ lên lớp</span>
+          </div>
+          <div class="pillar-box">
+            <strong>TÂM</strong>
+            <span>An nhiên, tự tin giao tiếp không sợ sai</span>
+          </div>
+          <div class="pillar-box">
+            <strong>TRÍ</strong>
+            <span>Tư duy sắc bén, ứng dụng AI nhớ từ siêu tốc</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="story-image-wrap">
+        <img src="https://placehold.co/600x430/991b1b/ffffff?text=10+Nam+Giang+Day+Dai+Hoc+%26+Cong+Nghe+AI" alt="Minh họa bục giảng và hành trình truyền lửa của thầy Khoán">
+        <div class="story-quote-card">
+          "Giáo dục không phải là đổ đầy một chiếc bình, mà là thắp sáng lên một ngọn lửa đam mê và trí tuệ bên trong mỗi người học." — Thầy Khoán HSK
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 3: CÁC KHÓA HỌC TIÊU BIỂU ==================== -->
+  <section id="khoa-hoc" class="courses-section">
+    <div class="container">
+      <div class="section-title-box">
+        <div class="section-tag">
+          <i class="fa-solid fa-graduation-cap"></i> Lộ Trình Tinh Gọn
+        </div>
+        <h2>Chương Trình Đào Tạo <span>Tiết Kiệm &amp; Hiệu Quả</span></h2>
+        <p>Được thiết kế chuyên biệt cho từng lứa tuổi, đảm bảo học hiểu ngay tại lớp và ứng dụng được ngay vào thực tế.</p>
+      </div>
+
+      <div class="courses-grid">
+        <!-- Thẻ 1: Trẻ Em -->
+        <article class="course-card">
+          <div class="course-banner">
+            <span class="course-badge"><i class="fa-solid fa-child-reaching"></i> Dành Cho Trẻ Em</span>
+            <h3>Tiếng Trung Trẻ Em - YCT</h3>
+          </div>
+          <div class="course-body">
+            <ul class="course-info-list">
+              <li>
+                <i class="fa-solid fa-star"></i>
+                <div><strong>Điểm nhấn:</strong> Vừa học vừa chơi, học qua thẻ bài sinh động (Flashcard), câu chuyện và ghi nhớ bằng hình ảnh trực quan.</div>
+              </li>
+              <li>
+                <i class="fa-solid fa-users"></i>
+                <div><strong>Phù hợp:</strong> Các bé độ tuổi Mầm non, Tiểu học bắt đầu làm quen ngoại ngữ thứ hai.</div>
+              </li>
+              <li>
+                <i class="fa-solid fa-laptop"></i>
+                <div><strong>Hình thức:</strong> Tương tác hai chiều vui nhộn, khơi dậy niềm yêu thích ngôn ngữ tự nhiên.</div>
+              </li>
+            </ul>
+
+            <div class="course-tuition-box">
+              <i class="fa-solid fa-mug-hot"></i>
+              <div>
+                <span>Mức học phí</span>
+                <strong>Siêu ưu đãi - Chỉ từ bằng ly trà sữa mỗi ngày</strong>
+              </div>
+            </div>
+
+            <button type="button" class="btn btn-red btn-pulse" onclick="chooseCourse('YCT Trẻ Em')">
+              <i class="fa-solid fa-pen-to-square"></i> Đăng Ký Khóa Này
+            </button>
+          </div>
+        </article>
+
+        <!-- Thẻ 2: Người Lớn -->
+        <article class="course-card">
+          <div class="course-banner">
+            <span class="course-badge"><i class="fa-solid fa-user-graduate"></i> Dành Cho Người Lớn</span>
+            <h3>Tiếng Trung Giao Tiếp &amp; Thi HSK 1-6</h3>
+          </div>
+          <div class="course-body">
+            <ul class="course-info-list">
+              <li>
+                <i class="fa-solid fa-robot"></i>
+                <div><strong>Điểm nhấn:</strong> Ứng dụng AI thực hành phản xạ giao tiếp và bám sát bộ đề thi HSK chuẩn quốc tế.</div>
+              </li>
+              <li>
+                <i class="fa-solid fa-clock"></i>
+                <div><strong>Lịch học linh hoạt qua Zoom:</strong> Tối Thứ 3 &amp; Thứ 5 hàng tuần (20:00 - 22:00), cực kỳ thuận tiện.</div>
+              </li>
+              <li>
+                <i class="fa-solid fa-briefcase"></i>
+                <div><strong>Phù hợp:</strong> Sinh viên cần chứng chỉ ra trường, Người đi làm, Kinh doanh buôn bán.</div>
+              </li>
+            </ul>
+
+            <div class="course-tuition-box">
+              <i class="fa-solid fa-hand-holding-heart"></i>
+              <div>
+                <span>Mức học phí</span>
+                <strong>Học phí bình dân - Hỗ trợ tối đa cho học viên</strong>
+              </div>
+            </div>
+
+            <button type="button" class="btn btn-red btn-pulse" onclick="chooseCourse('HSK Người Lớn')">
+              <i class="fa-solid fa-pen-to-square"></i> Đăng Ký Khóa Này
+            </button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 4: TESTIMONIALS ==================== -->
+  <section id="cam-nhan" class="testimonials-section">
+    <div class="container">
+      <div class="section-title-box">
+        <div class="section-tag">
+          <i class="fa-solid fa-heart"></i> Niềm Tin Từ Học Viên
+        </div>
+        <h2>Học Viên Nói Gì Về <span>Thầy Khoán?</span></h2>
+        <p>Niềm vui và sự tiến bộ mỗi ngày của các con và anh chị học viên chính là thước đo giá trị lớn nhất.</p>
+      </div>
+
+      <div class="testimonials-grid">
+        <!-- Review 1 -->
+        <div class="review-card">
+          <div>
+            <div class="review-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="review-text">
+              "Bé nhà mình rất thích học thầy Khoán. Cách thầy áp dụng công nghệ và sự tận tâm giúp bé nhớ mặt chữ rất nhanh."
+            </p>
+          </div>
+          <div class="reviewer-meta">
+            <div class="reviewer-avatar">PH</div>
+            <div>
+              <strong>Chị Minh Hương</strong>
+              <span>Phụ huynh lớp YCT Trẻ Em</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="review-card">
+          <div>
+            <div class="review-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="review-text">
+              "Lớp học Zoom buổi tối siêu tiện lợi cho người đi làm. Học phí rẻ mà chất lượng bài giảng tương tác của thầy quá đỉnh!"
+            </p>
+          </div>
+          <div class="reviewer-meta">
+            <div class="reviewer-avatar">SV</div>
+            <div>
+              <strong>Bạn Quốc Tuấn</strong>
+              <span>Sinh viên luyện thi HSK 4</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="review-card">
+          <div>
+            <div class="review-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="review-text">
+              "Tuyệt vời nhất là phương pháp Thân-Tâm-Trí giúp mình không bị áp lực khi học ngoại ngữ mới."
+            </p>
+          </div>
+          <div class="reviewer-meta">
+            <div class="reviewer-avatar">HV</div>
+            <div>
+              <strong>Chị Thanh Thảo</strong>
+              <span>Học viên lớp Tiếng Trung Giao Tiếp</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 5: FORM ĐĂNG KÝ & ZALO ==================== -->
+  <section id="dang-ky" class="register-section">
+    <div class="container">
+      <div class="section-title-box">
+        <div class="section-tag">
+          <i class="fa-solid fa-paper-plane"></i> Mở Cánh Cửa Tương Lai
+        </div>
+        <h2>Đăng Ký Học <span>Ngay Hôm Nay</span></h2>
+        <p>Điền thông tin bên dưới để nhận tư vấn lộ trình cá nhân hóa và ưu đãi học phí trực tiếp qua Zalo thầy Khoán.</p>
+      </div>
+
+      <div class="register-box">
+        <form id="hskRegisterForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="studentName">Họ và Tên người học <span>*</span></label>
+              <input type="text" id="studentName" class="form-input" placeholder="Nhập họ và tên (VD: Nguyễn Minh An)" required>
+            </div>
+
+            <div class="form-group">
+              <label for="studentAge">Độ tuổi (để tư vấn lớp)</label>
+              <input type="number" id="studentAge" class="form-input" placeholder="VD: 8 hoặc 25" min="4" max="80" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="studentPhone">Số điện thoại / Zalo <span>*</span></label>
+            <input type="tel" id="studentPhone" class="form-input" placeholder="Nhập SĐT Zalo của bạn (VD: 0908xxx...)" required>
+          </div>
+
+          <div class="form-group">
+            <label for="courseSelect">Chọn Khóa Học Quan Tâm</label>
+            <select id="courseSelect" class="form-input">
+              <option value="YCT Trẻ Em">YCT Trẻ Em</option>
+              <option value="HSK Người Lớn">HSK Người Lớn</option>
+              <option value="Giao Tiếp">Giao Tiếp</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn-gold btn-pulse" style="width: 100%; font-size: 1.12rem; margin-top: 8px;">
+            <i class="fa-solid fa-comments"></i> Gửi Đăng Ký &amp; Chat Zalo
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-brand">Tiếng Trung Khoán HSK</div>
+      <a href="tel:0908278993" class="footer-hotline">
+        <i class="fa-solid fa-phone-volume"></i> Hotline / Zalo: 0908278993
+      </a>
+      <p>© 2026 Tiếng Trung Khoán HSK. Website: KHOANHSK.BIZ</p>
+    </div>
+  </footer>
+
+  <!-- ==================== NÚT ZALO NỔI ==================== -->
+  <a href="https://zalo.me/0908278993" target="_blank" rel="noopener noreferrer" class="floating-zalo-btn btn-pulse">
+    <i class="fa-solid fa-comment-dots"></i>
+    <span>Zalo: 0908 278 993</span>
+  </a>
+
+  <!-- ==================== VANILLA JAVASCRIPT ==================== -->
+  <script>
+    // 1. Điều khiển đóng/mở Menu trên điện thoại di động
+    const mobileToggleBtn = document.getElementById('mobileToggleBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mLinks = document.querySelectorAll('.m-link');
+
+    mobileToggleBtn.addEventListener('click', function () {
+      mobileMenu.classList.toggle('active');
+    });
+
+    mLinks.forEach(function (link) {
+      link.addEventListener('click', function () {
+        mobileMenu.classList.remove('active');
+      });
+    });
+
+    // 2. Hàm chọn khóa học từ thẻ Card -> Cuộn mượt xuống Form và chọn sẵn trong Dropdown
+    function chooseCourse(courseValue) {
+      const courseSelect = document.getElementById('courseSelect');
+      const registerSection = document.getElementById('dang-ky');
+
+      if (courseSelect) {
+        courseSelect.value = courseValue;
+        courseSelect.classList.add('flash-select');
+        setTimeout(function () {
+          courseSelect.classList.remove('flash-select');
+        }, 1800);
+      }
+
+      if (registerSection) {
+        registerSection.scrollIntoView({ behavior: 'smooth' });
+      }
+
+      setTimeout(function () {
+        const studentNameInput = document.getElementById('studentName');
+        if (studentNameInput) studentNameInput.focus();
+      }, 650);
+    }
+
+    // 3. Xử lý sự kiện Submit Form -> Tạo đường dẫn tin nhắn và mở trực tiếp Zalo 0908278993
+    const hskRegisterForm = document.getElementById('hskRegisterForm');
+
+    hskRegisterForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById('studentName').value.trim();
+      const age = document.getElementById('studentAge').value.trim();
+      const phone = document.getElementById('studentPhone').value.trim();
+      const course = document.getElementById('courseSelect').value;
+
+      if (!name || !phone) {
+        alert('Vui lòng nhập đầy đủ Họ và Tên cùng Số điện thoại / Zalo!');
+        return;
+      }
+
+      const rawText = `Chào Tiếng Trung Khoán HSK, tôi là ${name}, ${age} tuổi, sđt ${phone}. Tôi muốn đăng ký học khóa ${course}. Xin tư vấn thêm!`;
+      const encodedText = encodeURIComponent(rawText);
+      const zaloRedirectUrl = `https://zalo.me/0908278993?text=${encodedText}`;
+
+      window.open(zaloRedirectUrl, '_blank');
+    });
+  </script>
+</body>
+</html>
